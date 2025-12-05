@@ -1,0 +1,157 @@
+PROJECT REPORT
+
+Title: Student Management System in C
+Authors: Ayush Pundeer, Aryan Pandey, Shourya tondon
+Course/Subject: Btech CSE batch 54
+Date: 4/12/25
+
+
+1. Introduction
+
+This project is a simple Student Management System written in the C programming language.
+It allows the user to add student records, display all students, and search for a specific student using a menu-driven interface. The program is modularized using separate .c and .h files for better structure and maintainability.
+
+
+2. Objectives
+
+The main objectives of the project are:
+
+1. To demonstrate understanding of C programming concepts.
+
+
+2. To implement functions, header files, and modular program structure.
+
+
+3. To design a menu-driven application for managing student data.
+
+
+4. To provide basic CRUD (Create, Read, Search) functionality.
+
+
+
+3. System Requirements
+
+Software Requirements:
+
+GCC Compiler or any C compiler
+
+Text Editor or IDE (VS Code, CodeBlocks, Dev-C++, etc.)
+
+
+Hardware Requirements:
+
+Basic computer capable of running a C compiler
+
+
+
+4. Project Structure
+
+The project includes the following files:
+
+1. main.c
+Contains the main menu loop and user interaction logic.
+
+
+2. student.h
+Header file containing function declarations and structures.
+
+
+3. student.c
+Contains function definitions for:
+
+Adding a student
+
+Displaying students
+
+Searching for a student
+
+
+5. Program Description
+
+The program presents a menu with four options:
+
+1. Add Student
+Prompts the user to enter student details, then stores them.
+
+
+2. Display Students
+Shows a list of all stored student records.
+
+
+3. Search Student
+Allows the user to search for a specific student, usually by ID or name.
+
+
+4. Exit
+Terminates the program.
+
+
+The menu runs in an infinite loop (while(1)), allowing continuous operation until the user chooses to exit.
+
+
+6. Code Overview (main.c)
+
+#include <stdio.h>
+#include "student.h"
+
+int main() {
+    int choice;
+
+    while (1) {
+        printf("\n1. Add Student");
+        printf("\n2. Display Students");
+        printf("\n3. Search Student");
+        printf("\n4. Exit");
+        printf("\nEnter Choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: addStudent(); break;
+            case 2: displayStudents(); break;
+            case 3: searchStudent(); break;
+            case 4: return 0;
+            default: printf("Invalid Choice");
+        }
+    }
+
+    return 0;
+}
+
+This code continuously displays the menu and calls the corresponding functions based on the user's input.
+
+
+7. Expected Output
+
+Upon running the program, the user sees:
+
+1. Add Student
+2. Display Students
+3. Search Student
+4. Exit
+Enter Choice:
+
+Based on the selection, the program performs the requested operation.
+
+
+8. Conclusion
+
+The Student Management System successfully demonstrates:
+
+Use of functions
+
+Modular programming (header + source files)
+
+User interaction through a menu
+
+Basic data handling in C
+
+
+This project can be further expanded by adding functionalities such as:
+
+Editing student records
+
+Deleting records
+
+Saving/loading data from files
+
+Sorting students
